@@ -7,7 +7,47 @@
   <body>
 
     <script>
+  var person = {
+    name: 'Sandra',
+    surname: 'Iordache',
+    age:29,
+    petOwner:true,
+    skills: {
+      html:true,
+      css:true,
+      javaScript: false
+    },
+    friends: {
+      larry: {
+        name:'Larry',
+        surname: 'Laryson',
+        age:30
+      },
+      steven: {
+        name:'Steven',
+        surname:'Stevemson',
+        age:31
+      },
+      carol: {
+        name:'Carol',
+        surname:'Carolson',
+        age:29
+      }
+    }
+  }
 
+  console.warn('Afiseaza varsta prietenei Carol');
+  console.log(person.friends.carol.age);
+
+  console.warn('Folosind anul curent calculeaza si afiseaza anul de nastere al lui Larry');
+  console.log(2020-.person.friends.larry.age);
+
+  console.warn('Steven este cu xx ani mai mare decat Larry.” folosind proprietatile name');
+  console.log( person.friends.steven.name + 
+              'este cu'  + person.friends.steven.age - person.friends.larry.age +
+              "ani mai care decat" +
+              person.friends.larry.name
+  );
     </script>
   </body>
 </html>
