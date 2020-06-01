@@ -8,7 +8,6 @@ form.addEventListener('submit', function(e) {
   var length = inputLength.value || 0,
       width = inputWidth.value || 0,
       depth = inputDepth.value || 0,
-      result = 0;
       result = length * width * depth;
 
   elementResult.innerText = result;

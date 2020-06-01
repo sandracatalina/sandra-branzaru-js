@@ -1,7 +1,8 @@
 var inputRadius = document.getElementById('radius'),
     elementResult = document.getElementById('result'),
     form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
+
+form.addEventListener('submit', function(e) {
     var radius = inputRadius.value || 0,
     result = 0;
     result =  Math.PI * Math.pow(radius,2);
