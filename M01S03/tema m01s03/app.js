@@ -62,14 +62,33 @@ console.log(`Intre ${person.firstName} si ${person.pets[0].name} este o diferent
 console.warn(`Afiseaza propozitia “ firstName, pet1, pet2, pet3 locuiesc toti in aceeasi casa” (folosind bracket notation pe arrayul pets)`);
 var message1Element1 = document.getElementById(`prop01`);
 var message = '';
+
 message = `${person.firstName}, ${person.pets[0].name}, ${person.pets[1].name} si ${person.pets[2].name} locuiesc toti in aceeasi casa.`;
 message1Element1.innerText = message;
 
 
+console.warn(`Calculeaza si afiseaza diferenta de varsta dintre animalul de pe pozitia 0 si cel de pe pozitia 2`);
+var message2Element2 = document.getElementById(`prop02`);
+var message2 = '';
 
+var yearsDifference = person.pets[0].age - person.pets[2].age;
 
+message2 = `Diferenta de varsta dintre ${person.pets[0].name} si ${person.pets[2].name} este ${yearsDifference}`;
+message2Element2.innerText = message2;
 
+console.warn(`Afiseaza propozitia: “Ma numesc xxx yyy, m-am nascut in birthYear si codul meu postal este: zipCode”`);
+var message3Element3 = document.getElementById('prop03');
+var message3 = '';
 
+message3 = `Ma numesc ${person.firstName} ${person.lastName} si m-am nascut in ${person.birthYear}, iar codul meu postal este: ${person.zipCode} .`;
+message3Element3.innerText = message3;
 
+console.warn(`Afiseaza propozitia: “Animalele mele s-au nascut in xxxx, xxx, respectiv xxx.” Foloseste anul curent pentru a efectua scaderea.`);
+var message4Element4 = document.getElementById('prop04');
+var message4 = '';
+var SoftKittyBirth = new Date().getFullYear() - person.pets[0].age;
+var WarmKittyBirth = new Date().getFullYear() - person.pets[1].age;
+var LittleballoffurBirth = new Date().getFullYear() - person.pets[2].age;
 
-
+message4 = `Animalele mele s-au nascut in ${SoftKittyBirth}, ${WarmKittyBirth} si ${LittleballoffurBirth}.`;
+message4Element4.innerText = message4;
