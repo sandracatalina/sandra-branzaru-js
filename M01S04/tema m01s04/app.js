@@ -55,8 +55,7 @@ for (i=1; i<=100; i++) {
   console.log("Buzz");
 }
 
-//fizzbuzz + restul numerelor
-
+//fizzbuzz + restul numerelor afisate
 console.warn (`Bucla incepe la 1 si numara pana la 100 inclusiv, in mod normal. Dar, in loc de numere divizibile cu 3 scrie Fizz si in loc de numere divizibile cu 5 scrie Buzz.`);
 
 for (i=1; i<=100; i++) {
