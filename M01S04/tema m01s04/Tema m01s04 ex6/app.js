@@ -215,15 +215,18 @@ console.log(message.trim());
 
 console.warn (`Afiseaza fraza prietenii mei sunt xxx yyy, xxx yyy, xxx yyy in ordine inversa a arrayului de prieteni. (Numarand de la length la 0).`);
 message = `Prietenii mei sunt : `;
-for (i = person.friends.length -1; i>=0; i++) {
-  var friendName = person.friends[i.name;
-  var friendSurname =person.friends[i].surname;
-  message += message + `${friendName} ${friendSurname}`;
+
+for (i = person.friends.length -1; i>= 0; i--) {
+  var friendName = person.friends[i].name;
+  var friendSurname = person.friends[i].surname;
+  message = message + `${friendName} ${friendSurname}`;
 
   if (i !== 0) {
+    // message = message + '.'
     message += '.';
-
-  } 
+  } else {
+    message += ', ';
+  }
 }
 
-console.log(message.trim());
+console.log(message);
