@@ -1,5 +1,6 @@
 let calculateRectangleArea = function (L, l) {
   let surface = L * l;
+
   return surface;
 };
 
@@ -13,7 +14,6 @@ let secondFieldYield = secondSurface * barleyYield;
 console.log(`Diferenta este: ${secondFieldYield - firstFieldYield}.`);
 
 console.warn('Stiind ca din 10kg de hamei produc 2.5l de bere, cati litri de bere va produce un teren de 400m pe 370m');
-
 const barleyQty = 10;
 const beerYield = 2.5;
 let thirdSurface = calculateRectangleArea(400, 370);
@@ -21,3 +21,5 @@ let thirdFieldYield = thirdSurface * barleyYield;
 let finalBeer = thirdFieldYield / barleyQty * beerYield;
 
 console.log(`Cantitatea de bere este: ${finalBeer}.`);
+
+
