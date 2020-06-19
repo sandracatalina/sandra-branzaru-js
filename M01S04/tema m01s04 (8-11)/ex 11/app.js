@@ -9,7 +9,7 @@ var person = {
     javaScript: false
   },
   friends: {
-    larry: {
+    larry: { 
       name: 'Larry',
       surname: 'Larryson',
       age: 30
