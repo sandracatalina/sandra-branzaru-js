@@ -20,6 +20,6 @@ let thirdSurface = calculateRectangleArea(400, 370);
 let thirdFieldYield = thirdSurface * barleyYield;
 let finalBeer = thirdFieldYield / barleyQty * beerYield;
 
-console.log(`Cantitatea de bere este: ${finalBeer}.`);
+console.log(`Cantitatea de bere este: ${finalBeer}.`)
 
 
