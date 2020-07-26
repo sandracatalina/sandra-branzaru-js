@@ -127,5 +127,3 @@ let audi = new Car (
 );
 
 audi.setSpeed(140);
-
-
