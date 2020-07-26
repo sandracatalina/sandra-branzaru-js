@@ -113,7 +113,7 @@ $(document).ready(() => {
     let $petForm = $addPetButton.parent();
 
     let $fields = $petForm.children('input[name]');
-    // re-use this code
+
     let formFields = [];
     $fields.each((index, domElement) => {
       let $field = $(domElement);
@@ -123,8 +123,26 @@ $(document).ready(() => {
         value: $field.val(),
       });
     });
-    // re-use this code
-
-    console.log(formFields);
+    
   });
+
+  $('#addFriend').on('click', (event) => {
+    let $addFriendButtom = $(event.currentTarget);
+    let $friendForm = $addFriendButtom.parent();
+    let $fields = $friendForm.children('input[name]');
+    let formFields = [];
+    $fields.each((index, domElement) => {
+      let $field = $(domElement);
+
+      formFields.push({
+        name: $field.attr('name'),
+        value: $field.val(),
+      });
+    });
+    
+
+  });
+});
+$( "label" ).click(function( event ) {
+  alert( event.currentTarget === this ); // true
 });
