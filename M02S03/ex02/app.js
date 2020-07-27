@@ -6,9 +6,10 @@ $('<p>', {
   class: 'msg',
   text: 'Acesta este un mesaj de eroare!',
 })
+
   .appendTo($('body'))
-  .addClass('error')
-  .prepend();
+  .addClass('error');
+  
 
 let errorNumber = 1;
 let supElement = $(`<sup>${errorNumber}</sup>`).prependTo('.error');
@@ -16,7 +17,6 @@ let supElement = $(`<sup>${errorNumber}</sup>`).prependTo('.error');
 // $('<p class="err">Documentatia jQuery se afla <span>aici</span>.</p>').appendTo(
 //   $('body'),
 // );
-
 // $('p span')
 //   .empty()
 //   .replaceWith(
@@ -25,3 +25,13 @@ let supElement = $(`<sup>${errorNumber}</sup>`).prependTo('.error');
 //       text: 'aici',
 //     }),
 //   );
+// Optimizeaza exemplul astfel incat sa foloseasca chaining direct pe paragraf si sa elimine nevoia de o variabila pentru elementul sup.
+
+$('<p>', {
+  class: 'msg',
+  text: 'Acesta este un mesaj de eroare!',
+})
+
+  .appendTo($('body'))
+  .addClass('error')
+  .prepend($(`<sup>1</sup>`));
