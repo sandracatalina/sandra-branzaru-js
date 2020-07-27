@@ -1,24 +1,26 @@
+
 let breakpoint = 650;
 
 function displayAlert() {
-  alert('Butonul a fost apasat');
+  alert('Butonul a fost apasat')
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  let windowWidth = window.innerWidth;
-  let buttonElement = document.querySelector('.btn');
+$(document).on('DOMContentLoaded', () => {
+  let windowWidth = $(window).width();
+  let buttonElement = $('.btn');
 
-  if (windowWidth >= 650) {
-    buttonElement.addEventListener('click', displayAlert);
+  if (windowWidth >= breakpoint) {
+    buttonElement.on('click', displayAlert);
   }
 
-  window.addEventListener('resize', () => {
-    let windowWidth = window.innerWidth;
+  $(window).on('resize', () => {
+    let windowWidth = $(window).width();
 
     if (windowWidth >= 650) {
-      buttonElement.addEventListener('click', displayAlert);
+      buttonElement.on('click', displayAlert);
     } else {
-      buttonElement.removeEventListener('click', displayAlert);
+      buttonElement.of('click', displayAlert);
     }
-  });
-});
+  })
+})
+
